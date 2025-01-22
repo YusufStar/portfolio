@@ -1,14 +1,33 @@
-import { Badge } from "@/components/ui/badge"
-
 export type Project = {
   title: string;
   description: string;
   badge: string;
   tags: string[];
   githubUrl: string;
+  images?: string[];
 }
 
 export const projects: Project[] = [
+  {
+    title: "AI Blog",
+    description: "A modern blog platform with AI integration, featuring MDX support, syntax highlighting, LaTeX rendering, and a rich text editor with advanced markdown capabilities.",
+    badge: "Full Stack Project",
+    tags: [
+      "Next.js 15",
+      "TypeScript",
+      "Prisma",
+      "MDX",
+      "Radix UI",
+      "Tailwind CSS"
+    ],
+    images: [
+      "/blog/blog-home.png",
+      "/blog/blog-blog.png",
+      "/blog/blog-blog-detail.png",
+      "/blog/blog-forum.png",
+    ],
+    githubUrl: "https://github.com/YusufStar/ai-blog"
+  },
   {
     title: "PricePulse",
     description: "A web scraping application that tracks product prices from e-commerce platforms, featuring email notifications for price changes and a subscription system for price alerts.",
@@ -20,6 +39,9 @@ export const projects: Project[] = [
       "Cheerio",
       "Nodemailer",
       "Tailwind CSS"
+    ],
+    images: [
+      "/pricepulse/pricepulse.png",
     ],
     githubUrl: "https://github.com/YusufStar/PricePulse"
   },
@@ -48,6 +70,12 @@ export const projects: Project[] = [
       "Tamagui UI",
       "Google Auth"
     ],
-    githubUrl: "https://github.com/YusufStar/love-boom"
+    githubUrl: "https://github.com/YusufStar/love-boom",
+    images: [
+      "/love-boom/love-boom-1.png",
+      "/love-boom/love-boom-2.png",
+      "/love-boom/love-boom-3.png",
+      "/love-boom/love-boom-4.png",
+    ]
   }
 ] 
