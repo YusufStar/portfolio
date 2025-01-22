@@ -19,6 +19,12 @@ export default function Home() {
     transition: { duration: 0.5 }
   };
 
+  const sectionVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.5 }
+  };
+
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-background via-background/90 to-background/80 text-foreground overflow-hidden">
       {/* Animated Background Patterns */}
@@ -96,9 +102,9 @@ export default function Home() {
         {/* Experience Section */}
         <motion.section 
           className="mt-32 space-y-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
+          variants={sectionVariants}
+          initial="initial"
+          animate="animate"
         >
           <div className="flex items-center gap-2">
             <Blocks className="h-6 w-6 text-primary" />
@@ -218,9 +224,9 @@ export default function Home() {
         {/* Featured Projects Section */}
         <motion.section 
           className="mt-32 space-y-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          variants={sectionVariants}
+          initial="initial"
+          animate="animate"
         >
           <div className="flex items-center gap-2">
             <Code className="h-6 w-6 text-primary" />
@@ -237,9 +243,9 @@ export default function Home() {
         {/* Skills Section */}
         <motion.section 
           className="mt-32 space-y-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
+          variants={sectionVariants}
+          initial="initial"
+          animate="animate"
         >
           <div className="flex items-center gap-2">
             <Terminal className="h-6 w-6 text-primary" />
@@ -276,9 +282,9 @@ export default function Home() {
         {/* Contact Section */}
         <motion.section 
           className="mt-32 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
+          variants={sectionVariants}
+          initial="initial"
+          animate="animate"
         >
           <h2 className="text-2xl font-bold mb-8">Let&apos;s Connect</h2>
           <div className="flex justify-center gap-4">

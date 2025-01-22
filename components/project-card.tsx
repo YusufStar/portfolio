@@ -11,7 +11,10 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <Card className="group relative overflow-hidden border border-primary/20 bg-background/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
+    <Card 
+      className="group relative overflow-hidden border border-primary/20 bg-background/50 backdrop-blur-sm hover:border-primary/50 transition-colors"
+      role="article"
+    >
       <CardContent className="p-6">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
         <Badge variant="outline" className="mb-4">{project.badge}</Badge>
@@ -25,7 +28,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           ))}
         </div>
         <div className="mt-6 flex gap-3">
-          <Link href={project.githubUrl} target="_blank">
+          <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="sm" className="group">
               <Github className="mr-2 h-4 w-4" />
               View Source
