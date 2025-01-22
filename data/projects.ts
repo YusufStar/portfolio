@@ -10,6 +10,20 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "PricePulse",
+    description: "A web scraping application that tracks product prices from e-commerce platforms, featuring email notifications for price changes and a subscription system for price alerts.",
+    badge: "Full Stack Project",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "Cheerio",
+      "Nodemailer",
+      "Tailwind CSS"
+    ],
+    githubUrl: "https://github.com/YusufStar/PricePulse"
+  },
+  {
     title: "Code Craft",
     description: "A sophisticated code editor platform with real-time collaboration features, AI integration, and Monaco editor implementation.",
     badge: "Full Stack Project",
