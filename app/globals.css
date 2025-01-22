@@ -10,6 +10,8 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
+    --primary-rgb: 89 147 255;
+    --secondary-rgb: 191 102 255;
     --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
     --secondary: 280 40% 50%;
@@ -34,6 +36,8 @@
     --color-3: 210 100% 63%;
     --color-4: 195 100% 63%;
     --color-5: 90 100% 63%;
+    --glow-primary-rgb: 37 99 235;
+    --glow-secondary-rgb: 30 58 138;
   }
   .dark {
     --color-1: 0 100% 63%;

@@ -32,7 +32,7 @@ export default function Home() {
         className="absolute inset-0 opacity-10"
         width={40} 
         height={40} 
-        strokeDasharray="4 4"
+        strokeDasharray={4}
       />
       <DotPattern 
         className="absolute inset-0 opacity-20" 

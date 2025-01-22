@@ -16,7 +16,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
       role="article"
     >
       <CardContent className="p-6">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
         <Badge variant="outline" className="mb-4">{project.badge}</Badge>
         <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
         <p className="text-muted-foreground">
@@ -28,13 +28,23 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           ))}
         </div>
         <div className="mt-6 flex gap-3">
-          <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="sm" className="group">
+          <Button
+            variant="outline"
+            size="sm"
+            className="group"
+            asChild
+          >
+            <Link 
+              href={project.githubUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
               <Github className="mr-2 h-4 w-4" />
               View Source
               <ExternalLink className="ml-2 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </CardContent>
     </Card>
